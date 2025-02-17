@@ -1,4 +1,4 @@
-import { typeFoods } from "../context/homeContext";
+import { typeFoods } from "../home";
 
 export const Card = ({
   food,

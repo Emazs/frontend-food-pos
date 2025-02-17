@@ -4,7 +4,7 @@ export interface Dishe {
   price: string;
   strMeal: string;
   strMealThumb: string;
-  strMealThumbUrl?: File | null;
+  strMealThumbUrl: File | null;
 }
 
 export interface ConfigContextProps {

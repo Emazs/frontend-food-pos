@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { dele } from "../../../assets/svg/svg";
-import { typeFoods } from "../context/homeContext";
+import { typeFoods } from "../home";
 
 export const ItemsDelivery = ({
   order,

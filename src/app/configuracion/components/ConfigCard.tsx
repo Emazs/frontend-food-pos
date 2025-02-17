@@ -1,4 +1,4 @@
-import { typeFoods } from "../../home/context/homeContext";
+import { typeFoods } from "../../home/home";
 import { useConfig } from "../hooks/useConfig";
 
 export const ConfigCard = ({ food }: { food: typeFoods }) => {
@@ -11,6 +11,7 @@ export const ConfigCard = ({ food }: { food: typeFoods }) => {
       price,
       strMeal,
       strMealThumb,
+      strMealThumbUrl: null,
       idMeal: Number(idMeal),
     };
   
