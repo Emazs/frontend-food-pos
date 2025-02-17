@@ -70,7 +70,7 @@ export const Configuracion = () => {
 
       <section className="w-full flex flex-col md:flex-row gap-4 px-4">
         <section className="w-full md:w-1/4">
-          <section className="w-full bg-blue-card-bg p-4 py-6 flex flex-col gap-12 max-[426px]:hidden">
+          <section className="w-full bg-blue-card-bg p-4 py-6 flex flex-col gap-12 max-[426px]:hidden rounded-lg">
             {items.map((item) => (
               <div key={item.title} onClick={() => setSelectedView(item)}>
                 <ItemSettings
@@ -103,7 +103,7 @@ export const Configuracion = () => {
           </section>
         </section>
 
-        <section className="w-full md:w-3/4 bg-blue-card-bg">
+        <section className="w-full md:w-3/4 bg-blue-card-bg p-4 rounded-lg">
           {selectedView.component}
         </section>
       </section>
