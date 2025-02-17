@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #EA7C69;
+  --color-white: #FFFFFF;
+  --color-gray: #ABBBC2;
+
+  --color-blue-bg: #252836;
+  --color-blue-card-bg: #1F1D2B;
+  --color-orange-logo-bg: #EB966A;
+
+  /* Dashboard */
+
+  --color-green: #50D1AA;
+  --color-purple: #9288E0;
+  --color-red: #FF7CA3;
+  --color-orange-light: rgba(255, 181, 114, 0.4);
+  --color-blue: #65B0F6;
+}
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+}
