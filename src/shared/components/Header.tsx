@@ -24,7 +24,7 @@ export const Header = () => {
           {burguer}
 
           {isOpenModal && (
-            <section className="w-[200px] bg-blue-card-bg absolute right-[0px] z-[999] rounded-lg p-2 transition-all duration-700">
+            <section className="w-[200px] bg-blue-card-bg shadow-md shadow-white/10 absolute right-[0px] z-[999] rounded-lg p-2 transition-all duration-700">
               <ul className="flex flex-col gap-4">
                 <li>
                   <Link
