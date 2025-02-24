@@ -32,7 +32,6 @@ export const Login = () => {
       if (error) {
         alert("usuario o contraseña incorrector");
       } else {
-        console.log('a');
         navigate("/auth");
         <Navigate to={'/auth'} />
       }
