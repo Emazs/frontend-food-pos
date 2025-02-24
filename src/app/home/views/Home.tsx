@@ -123,6 +123,7 @@ export const Home = () => {
 
       {/* Ordenes */}
       <section
+        data-testid="order-section"
         className={`w-[35%] p-4 h-screen bg-blue-card-bg sticky top-0 transition-all duration-300 max-[768px]:w-full ${
           orders.length == 0 ? "hidden" : "block"
         }`}

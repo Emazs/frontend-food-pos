@@ -49,6 +49,7 @@ export const Card = ({
         <div>
           <button
             onClick={addOrder}
+            data-testid={strMeal}
             name="Spicy seasoned seafood noodles"
             className="py-2 px-4 rounded-md bg-green-700 cursor-pointer"
           >
