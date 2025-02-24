@@ -57,4 +57,9 @@ Para ejecutar el proyecto localmente:
    ```bash
    npm run dev
    ```
+4. Para entrar puedes usar el usuario y contraseña
+   ```bash
+   usuario: johnd 
+   contraseña: m38rmF$
+   ```
 
