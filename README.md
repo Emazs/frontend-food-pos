@@ -6,6 +6,11 @@ Este proyecto es una web diseñada para establecimientos, permitiendo la selecci
 
 ### Captura de pantalla
 
+<p align="center">
+  <img src="https://github.com/Emazs/frontend-food-pos/blob/main/src/assets/disign/home_desktop.png?raw=true" width="30%">
+  <img src="https://github.com/Emazs/frontend-food-pos/blob/main/src/assets/disign/dashboard_desktop.png?raw=true" width="30%">
+  <img src="https://github.com/Emazs/frontend-food-pos/blob/main/src/assets/disign/config_desktop.png?raw=true" width="30%">
+</p>
 
 
 ### Enlaces
@@ -15,7 +20,7 @@ Este proyecto es una web diseñada para establecimientos, permitiendo la selecci
 
 ## Proceso de desarrollo
 
-Para este proyecto, me enfoqué en la creación de una interfaz intuitiva y amigable para el usuario, donde los establecimientos puedan seleccionar fácilmente sus productos y visualizar el costo total en tiempo real. La página tiene un login, en esta utilicé [fakestoreapi](https://fakestoreapi.com/) para simular una conexión a backend con su endpoint de login, el cual retorna un token simulando el uso de JWT. Para mostrar las comidas usé [themealdb](https://www.themealdb.com/api.php). La parte más desafiante fue la gestión del estado para actualizar correctamente las cantidades y precios de los productos seleccionados, además del correcto filtrado de las comidas usando las categorías y el input de búsqueda. Para las rutas utilicé react-router en su última versión, además de Tailwind CSS y el uso de Zod para realizar validaciones cuando en la parte de configuración se desea agregar un plato nuevo.
+Para este proyecto, me enfoqué en la creación de una interfaz intuitiva y amigable para el usuario, donde los establecimientos puedan seleccionar fácilmente sus productos y visualizar el costo total en tiempo real. La página tiene un login, en esta utilicé [fakestoreapi](https://fakestoreapi.com/) para simular una conexión a backend con su endpoint de login, el cual retorna un token simulando el uso de JWT. Para mostrar las comidas usé [themealdb](https://www.themealdb.com/api.php). La parte más desafiante fue la gestión del estado para actualizar correctamente las cantidades y precios de los productos seleccionados, además del correcto filtrado de las comidas usando las categorías y el input de búsqueda. Para las rutas utilicé react-router en su última versión, además de Tailwind CSS y el uso de Zod para realizar validaciones cuando en la parte de configuración se desea agregar un plato nuevo. El diseño fue tomado y adaptado para diferentes dispositivos de: [@yahyaamirudin](https://www.figma.com/community/file/944188956363619079)
 
 ### Tecnologías utilizadas
 
@@ -51,5 +56,10 @@ Para ejecutar el proyecto localmente:
 3. Iniciar el servidor de desarrollo
    ```bash
    npm run dev
+   ```
+4. Para entrar puedes usar el usuario y contraseña
+   ```bash
+   usuario: johnd 
+   contraseña: m38rmF$
    ```
 
