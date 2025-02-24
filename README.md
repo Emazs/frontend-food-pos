@@ -6,6 +6,11 @@ Este proyecto es una web diseñada para establecimientos, permitiendo la selecci
 
 ### Captura de pantalla
 
+<p align="center">
+  <img src="https://github.com/Emazs/frontend-food-pos/blob/main/src/assets/disign/home_desktop.png?raw=true" width="30%">
+  <img src="https://github.com/Emazs/frontend-food-pos/blob/main/src/assets/disign/dashboard_desktop.png?raw=true" width="30%">
+  <img src="https://github.com/Emazs/frontend-food-pos/blob/main/src/assets/disign/config_desktop.png?raw=true" width="30%">
+</p>
 
 
 ### Enlaces
