@@ -14,11 +14,10 @@ export const ConfigCard = ({ food }: { food: typeFoods }) => {
       strMealThumbUrl: null,
       idMeal: Number(idMeal),
     };
-  
+
     setDishe(foodData);
     setModalOpen(true);
   };
-  
 
   return (
     <div
@@ -37,7 +36,7 @@ export const ConfigCard = ({ food }: { food: typeFoods }) => {
         </h2>
         <p className="text-[16px] font-semibold">$ {price}</p>
         <p className="text-[16px] text-[#ABBBC2]">
-          {available} Bowls available
+          {available} Platos disponibles
         </p>
         <div>
           <button

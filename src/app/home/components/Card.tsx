@@ -44,7 +44,7 @@ export const Card = ({
         </h2>
         <p className="text-[16px] font-semibold">$ {price}</p>
         <p className="text-[16px] text-[#ABBBC2]">
-          {available} Bowls available
+          {available} Platos disponibles
         </p>
         <div>
           <button
@@ -53,7 +53,7 @@ export const Card = ({
             name="Spicy seasoned seafood noodles"
             className="py-2 px-4 rounded-md bg-green-700 cursor-pointer"
           >
-            Add
+            Agregar
           </button>
         </div>
       </div>

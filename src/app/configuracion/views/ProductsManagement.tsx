@@ -66,11 +66,11 @@ export const ProductsManagement = () => {
         </section>
         <section>
           <section>
-            <h2 className="font-semibold">Choose Dishes</h2>
+            <h2 className="font-semibold">Elija los platos</h2>
           </section>
           <section className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-y-auto max-h-[500px]">
             {tableFoods.map((food) => (
-              <ConfigCard food={food} key={food.strMeal}/>
+              <ConfigCard food={food} key={food.strMeal} />
             ))}
           </section>
         </section>

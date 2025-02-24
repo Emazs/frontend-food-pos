@@ -18,7 +18,7 @@ export const Home = () => {
     tableFoods,
   } = useHome();
   const [filterFood, setFilterFood] = useState(categories[0] || "Pasta");
-  const [delivery, setDelivery] = useState("Dine In");
+  const [delivery, setDelivery] = useState("Comer en casa");
   const [subTotal, setSubTotal] = useState(0);
   const date = Date().split(" ", 4).join(" ");
   const [isModalopen, setIsModalopen] = useState(false);
@@ -46,7 +46,7 @@ export const Home = () => {
   const closeModal = () => {
     setOrders([]);
     setSubTotal(0);
-    setDelivery("Dine In");
+    setDelivery("Comer en casa");
     setFilterFood("Pasta");
 
     setIsModalopen(false);
@@ -78,7 +78,7 @@ export const Home = () => {
               type="text"
               value={inputSearch}
               onChange={filterFoodsByName}
-              placeholder="Search for food, coffe, etc.."
+              placeholder="Buscar por food, coffe, etc.."
               className="max-[450px]:w-full placeholder:text-[#ABBBC2] bg-[#393C49] pr-4 pl-8 py-2 rounded-md text-[#ABBBC2] border border-gray-500"
             />
           </div>
@@ -105,7 +105,7 @@ export const Home = () => {
           </section>
           <section>
             <section>
-              <h2 className="font-semibold">Choose Dishes</h2>
+              <h2 className="font-semibold">Elija los platos</h2>
             </section>
             <section className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {tableFoods.map((food) => (
@@ -131,10 +131,10 @@ export const Home = () => {
         <section>
           <h2 className="text-[22px] mb-4">Orden #34562</h2>
           <div className="flex gap-4 mb-4">
-            {["Dine In", "To Go", "Delivery"].map((item) => (
+            {["Comer en casa", "Para llevar", "Entrega"].map((item) => (
               <button
                 key={item}
-                onClick={(e) => changeFilterFood(e, "delivery")}
+                onClick={(e) => changeFilterFood(e, "Entrega")}
                 name={item}
                 className={`cursor-pointer border border-[#393C49] rounded-md font-semibold text-orange p-2 text-[14px] ${
                   delivery == item && "bg-orange text-white"
@@ -149,11 +149,11 @@ export const Home = () => {
         <section className="w-full pb-4 mb-4 border-0 border-b-1 border-[#393C49]">
           <section className="flex justify-between gap-6 font-semibold text-[16px]">
             <div className="w-[85%] flex justify-between">
-              <p>Item</p>
-              <p>Qty</p>
+              <p>Plato</p>
+              <p>Cantidad</p>
             </div>
             <div>
-              <p>Price</p>
+              <p>Precio</p>
             </div>
           </section>
         </section>
@@ -175,11 +175,11 @@ export const Home = () => {
         <section className="mt-4">
           <section className="flex flex-col gap-4 ">
             <div className="flex justify-between">
-              <p className="text-[#ABBBC2]">Discount</p>
+              <p className="text-[#ABBBC2]">Descuento</p>
               <p>$ 0</p>
             </div>
             <div className="flex justify-between">
-              <p className="text-[#ABBBC2]">Sub total</p>
+              <p className="text-[#ABBBC2]">Total</p>
               <p>$ {subTotal}</p>
             </div>
           </section>
@@ -196,7 +196,7 @@ export const Home = () => {
               }
               className="w-full bg-orange py-3 px-4 rounded-lg cursor-pointer"
             >
-              Continue to Payment
+              Continuar con el pago
             </button>
           </section>
         </section>

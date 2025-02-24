@@ -47,8 +47,8 @@ export const Login = () => {
       <section className="px-8 py-10 min-w-[30%] rounded-xl flex flex-col justify-center bg-white shadow-lg">
         {/* Header */}
         <section className="mb-6 text-center">
-          <h1 className="text-4xl mb-4 font-bold text-gray-800">Login</h1>
-          <p className="text-lg font-semibold text-gray-600">Welcome back!</p>
+          <h1 className="text-4xl mb-4 font-bold text-gray-800">Iniciar sesión</h1>
+          <p className="text-lg font-semibold text-gray-600">Bienvenido de nuevo!</p>
         </section>
 
         {/* Formulario */}
@@ -59,7 +59,7 @@ export const Login = () => {
               name="username"
               value={authForm.username}
               onChange={handleInputsChange}
-              placeholder="Username"
+              placeholder="Usuario"
               className="px-4 py-2 rounded-lg border border-gray-300 bg-gray-100 outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
@@ -70,7 +70,7 @@ export const Login = () => {
               name="password"
               value={authForm.password}
               onChange={handleInputsChange}
-              placeholder="Password"
+              placeholder="Constraseña"
               className="px-4 py-2 rounded-lg border border-gray-300 bg-gray-100 outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
@@ -79,10 +79,10 @@ export const Login = () => {
           <div className="flex justify-between items-center">
             <label className="flex items-center text-sm text-gray-600">
               <input type="checkbox" className="mr-2" />
-              Remember me
+              Recuerdame
             </label>
             <a href="#" className="text-sm text-blue-500 hover:underline">
-              Forgot password?
+              Olvidate tu contraseña?
             </a>
           </div>
 
@@ -96,7 +96,7 @@ export const Login = () => {
                 <p>Processando</p>
               </div>
             ) : (
-              <p>Login</p>
+              <p>Inicar sesión</p>
             )}
           </button>
         </form>

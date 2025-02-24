@@ -76,19 +76,19 @@ export const Dashboard = () => {
 
         <section className="flex gap-4 my-6 flex-wrap">
           <Cards
-            title="Total Revenue"
+            title="Ingresos totales"
             total="$10,243.00"
             percent="32.40"
             img={dollar}
           />
           <Cards
-            title="Total Dish Ordered"
+            title="Total de platos pedidos"
             total="23,456"
             percent="12.40"
             img={page}
           />
           <Cards
-            title="Total Customer"
+            title="Cliente total"
             total="1,234"
             percent="2.40"
             img={customer}
