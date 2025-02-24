@@ -8,11 +8,13 @@ const defaultAuthContextValue: AuthContextProps = {
   loginUser: async () => false,
   isLoading: false,
   setIsLoading: () => false,
+  isAuthenticated: false
 };
 
 const AuthContext = createContext<AuthContextProps>(defaultAuthContextValue);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>( !!sessionStorage.getItem('token') ||false)
   const [authForm, setAuthForm] = useState<typeForm>({
     username: "",
     password: "",
@@ -29,12 +31,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
 
     sessionStorage.setItem("token", response.token);
+    setIsAuthenticated(true)
     return false;
   };
 
   return (
     <AuthContext.Provider
-      value={{ authForm, setAuthForm, loginUser, isLoading, setIsLoading }}
+      value={{ authForm, setAuthForm, loginUser, isLoading, setIsLoading, isAuthenticated }}
     >
       {children}
     </AuthContext.Provider>

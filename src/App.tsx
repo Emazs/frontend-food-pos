@@ -8,9 +8,10 @@ import { NotFoundPage } from "./shared/views/NotFoundPage";
 import { Home } from "./app/home/views/Home";
 import { Dashboard } from "./app/dashboard/views/Dashboard";
 import { Configuracion } from "./app/configuracion/views/Configuracion";
+import { useAuth } from "./app/auth/hooks/useAuth";
 
 function App() {
-  const isAuthenticated = !!sessionStorage.getItem("token") || false;
+  const { isAuthenticated } = useAuth();
 
   return (
     <Routes>

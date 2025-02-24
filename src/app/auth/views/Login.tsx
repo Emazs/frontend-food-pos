@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 import { useAuth } from "../hooks/useAuth";
 import { authForm } from "../auth";
 import { loaderCircle } from "../../../assets/svg/svg";
@@ -27,10 +27,14 @@ export const Login = () => {
       setIsLoading(true);
       error = await loginUser(authForm);
 
+      
+      
       if (error) {
         alert("usuario o contraseña incorrector");
       } else {
+        console.log('a');
         navigate("/auth");
+        <Navigate to={'/auth'} />
       }
     } catch (err) {
       alert(err);
