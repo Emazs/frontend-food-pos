@@ -2,7 +2,6 @@ import "./App.css";
 import { Navigate, Route, Routes } from "react-router";
 import { PublicLayout } from "./layouts/Public.layout";
 import { Login } from "./app/auth/views/Login";
-import { Register } from "./app/auth/views/Register";
 import PrivateRoute from "./utils/PrivateRoute";
 import { NotFoundPage } from "./shared/views/NotFoundPage";
 import { Home } from "./app/home/views/Home";
@@ -17,7 +16,6 @@ function App() {
     <Routes>
       <Route path="/" element={<PublicLayout />}>
         <Route index path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         <Route path="/" element={<Navigate to="/login" />} />
       </Route>
 
