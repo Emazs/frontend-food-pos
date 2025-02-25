@@ -9,5 +9,6 @@ export interface AuthContextProps {
   loginUser: (form: authForm) => Promise<boolean>;
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  isAuthenticated: boolean
+  isAuthenticated: boolean;
+  setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
 }

@@ -5,7 +5,7 @@ import { loaderCircle } from "../../../assets/svg/svg";
 
 export const Login = () => {
   const navigate = useNavigate();
-  const { authForm, setAuthForm, loginUser, isLoading, setIsLoading } =
+  const { authForm, setAuthForm, loginUser, isLoading, setIsLoading, setIsAuthenticated, isAuthenticated } =
     useAuth();
 
   const handleInputsChange = (
@@ -27,13 +27,11 @@ export const Login = () => {
       setIsLoading(true);
       error = await loginUser(authForm);
 
-      
-      
       if (error) {
         alert("usuario o contraseña incorrector");
       } else {
         navigate("/auth");
-        <Navigate to={'/auth'} />
+        <Navigate to={"/auth"} />;
       }
     } catch (err) {
       alert(err);
@@ -42,13 +40,28 @@ export const Login = () => {
     setIsLoading(false);
   };
 
+  const handleDemo = (event: { preventDefault: () => void; }) => {
+    event.preventDefault()
+
+    console.log(isAuthenticated);
+    
+    sessionStorage.setItem("token", 'demo');
+    setIsAuthenticated(true)
+
+    navigate("/auth");
+  }
+
   return (
     <section className="w-full h-screen flex justify-center items-center bg-gradient-to-r from-blue-bg to-blue-950">
       <section className="px-8 py-10 min-w-[30%] rounded-xl flex flex-col justify-center bg-white shadow-lg">
         {/* Header */}
         <section className="mb-6 text-center">
-          <h1 className="text-4xl mb-4 font-bold text-gray-800">Iniciar sesión</h1>
-          <p className="text-lg font-semibold text-gray-600">Bienvenido de nuevo!</p>
+          <h1 className="text-4xl mb-4 font-bold text-gray-800">
+            Iniciar sesión
+          </h1>
+          <p className="text-lg font-semibold text-gray-600">
+            Bienvenido de nuevo!
+          </p>
         </section>
 
         {/* Formulario */}
@@ -88,7 +101,11 @@ export const Login = () => {
 
           <button
             type="submit"
-            className={`w-full py-3 rounded-lg font-bold ${isLoading ? 'bg-blue-400 hover:bg-blue-400' : 'bg-blue-600 hover:bg-blue-700'}  text-white text-center  transition cursor-pointer`}
+            className={`w-full py-3 rounded-lg font-bold ${
+              isLoading
+                ? "bg-blue-400 hover:bg-blue-400"
+                : "bg-blue-600 hover:bg-blue-700"
+            }  text-white text-center  transition cursor-pointer`}
           >
             {isLoading ? (
               <div className="flex items-center justify-center gap-4">
@@ -97,6 +114,25 @@ export const Login = () => {
               </div>
             ) : (
               <p>Inicar sesión</p>
+            )}
+          </button>
+
+          <button
+            onClick={handleDemo}
+            type="reset"
+            className={`w-full py-3 rounded-lg font-bold ${
+              isLoading
+                ? "bg-purple-400 hover:bg-purple-400"
+                : "bg-purple-700 hover:bg-purple-500"
+            }  text-white text-center  transition cursor-pointer`}
+          >
+            {isLoading ? (
+              <div className="flex items-center justify-center gap-4">
+                <div className="animate-spin">{loaderCircle}</div>
+                <p>Processando</p>
+              </div>
+            ) : (
+              <p>Mirar demo</p>
             )}
           </button>
         </form>
