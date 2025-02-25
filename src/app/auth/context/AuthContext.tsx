@@ -8,7 +8,8 @@ const defaultAuthContextValue: AuthContextProps = {
   loginUser: async () => false,
   isLoading: false,
   setIsLoading: () => false,
-  isAuthenticated: false
+  isAuthenticated: false,
+  setIsAuthenticated: () => false,
 };
 
 const AuthContext = createContext<AuthContextProps>(defaultAuthContextValue);
